@@ -1,0 +1,16 @@
+# Especificações e documentos internos
+spec/tech-spec.md
+
+# Variáveis de ambiente e segredos
+.env
+.env.local
+.env.*.local
+
+# IDEs e Editores
+.vscode/
+.idea/
+
+# Arquivos do Sistema Operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
