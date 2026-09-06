@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox - Aula 05</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Página Sandbox</h1>
+    <p><a href="index.html">Voltar para a página inicial</a></p>
+
+    <p class="destaque">Ambiente prático de testes para recursos de áudio, vídeo e estilização CSS externa.</p>
+
+    <section class="secao-midia">
+        <h2>Áudio Local</h2>
+        <p>Reprodução de áudio local com a tag <code>&lt;audio&gt;</code> configurada com controles e pré-carregamento de metadados:</p>
+        <audio preload="metadata" controls>
+            <source src="midia/audio.mp3" type="audio/mpeg">
+            <p>Infelizmente seu navegador não suporta a tag de áudio. <a href="midia/audio.mp3" download>Clique aqui para baixar o arquivo de áudio</a>.</p>
+        </audio>
+    </section>
+
+    <section class="secao-midia">
+        <h2>Vídeo Externo Incorporado (YouTube)</h2>
+        <p>Incorporação de streaming de vídeo através do elemento <code>&lt;iframe&gt;</code>:</p>
+        <iframe width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/JTbwTm8yGMs?si=oDPPRvgZ38sXMJz6" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </section>
+</body>
+</html>

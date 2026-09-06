@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2d3748;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #1a365d;
+    text-align: center;
+}
+
+h2 {
+    color: #2b6cb0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-top: 24px;
+}
+
+.destaque {
+    color: #c53030;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.secao-midia {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
