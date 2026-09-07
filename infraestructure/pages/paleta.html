@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paleta de Cores — Sistema de Gestão</title>
+  <link rel="icon" type="image/x-icon" href="../assets/midia/icon/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/paleta.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Cabeçalho -->
+  <header class="page-header">
+      <a href="index.html">Voltar ao sistema</a>
+    <h1>Paleta de Cores do Projeto</h1>
+    <p class="subtitle">Definição visual do Sistema de Gestão de Clientes — identidade, escolhas e aplicação prática.</p>
+  </header>
+
+  <!-- 1. Cor principal e justificativa -->
+  <section class="section">
+    <p class="section-label">01 — Identidade</p>
+    <h2 class="section-title">Cor principal e justificativa</h2>
+    <p class="section-desc">A cor primária ancora toda a hierarquia visual e comunica o posicionamento do produto.</p>
+
+    <div class="justification-card">
+      <div class="color-hero" title="#2E7D32 — Verde Floresta"></div>
+      <div class="justification-text">
+        <h3>Verde Floresta — <code>#2E7D32</code></h3>
+        <p>
+          O verde foi escolhido como cor principal por refletir dois valores centrais do sistema:
+          <strong>confiança financeira</strong> e <strong>controle</strong>. Culturalmente, o verde
+          é associado ao dinheiro, prosperidade e saldo positivo — conceitos que o usuário precisa
+          sentir ao gerenciar cobranças, dívidas e pagamentos de clientes.
+        </p>
+        <p style="margin-top:10px;">
+          O tom escolhido (<em>Verde Floresta</em>) evita o verde elétrico — que lembra marcas de
+          tecnologia genéricas — e aposta em um verde mais sóbrio e profundo, transmitindo
+          seriedade e maturidade adequadas a um contexto de negócios. Ele ainda oferece contraste
+          suficiente sobre fundo claro para atender às diretrizes WCAG AA de acessibilidade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Tipo de paleta -->
+  <section class="section">
+    <p class="section-label">02 — Tipo de paleta</p>
+    <h2 class="section-title">Paleta Análoga com acento complementar</h2>
+    <p class="section-desc">
+      A paleta é <strong>análoga</strong>: as cores principais vivem próximas na roda cromática
+      (verde escuro → verde médio → verde claro), criando harmonia e coesão. O vermelho é
+      utilizado como <strong>acento complementar pontual</strong>, reservado exclusivamente para
+      estados de alerta — dívidas atrasadas, inadimplência — aproveitando o alto contraste
+      psicológico entre verde (positivo) e vermelho (negativo).
+    </p>
+
+    <span class="palette-type-badge">
+      ● Análoga + acento complementar
+    </span>
+
+    <!-- Diagrama visual da paleta -->
+    <div class="palette-diagram" title="Distribuição visual da paleta">
+      <div class="seg" style="background-color:#1B5E20; flex: 0.8;"><span>ESCURO</span></div>
+      <div class="seg" style="background-color:#2E7D32; flex: 1.4;"><span>PRINCIPAL</span></div>
+      <div class="seg" style="background-color:#4CAF50; flex: 1;"><span>MÉDIO</span></div>
+      <div class="seg" style="background-color:#EBEBEB; flex: 1.4;"><span style="color:#555555;">NEUTRO</span></div>
+      <div class="seg" style="background-color:#C62828; flex: 0.8;"><span>ALERTA</span></div>
+    </div>
+    <p style="font-size:0.78rem; color:#7A7A7A;">
+      Proporção aproximada de uso: tons análogos de verde dominam ~75 % da interface; neutros
+      constituem ~20 %; vermelho aparece em &lt;5 % — apenas onde há risco ou pendência.
+    </p>
+  </section>
+
+  <!-- 3. Todas as cores da paleta -->
+  <section class="section">
+    <p class="section-label">03 — Paleta completa</p>
+    <h2 class="section-title">Todas as cores e seus papéis</h2>
+    <p class="section-desc">Cada cor possui uma responsabilidade única na interface. Cores não listadas aqui não devem ser introduzidas sem revisão.</p>
+
+    <div class="swatch-grid">
+
+      <p class="group-label">Família principal (análoga)</p>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#1B5E20;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Verde Profundo</div>
+          <div class="swatch-hex">#1B5E20</div>
+          <div class="swatch-role">Hover / botão pressionado</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#2E7D32; box-shadow: inset 0 0 0 3px rgba(255,255,255,0.25);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Verde Floresta ★</div>
+          <div class="swatch-hex">#2E7D32</div>
+          <div class="swatch-role">Cor principal — botões, navegação ativa, ações rápidas</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#4CAF50;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Verde Médio</div>
+          <div class="swatch-hex">#4CAF50</div>
+          <div class="swatch-role">Badge "Em dia", ícones secundários</div>
+        </div>
+      </div>
+
+      <p class="group-label">Neutros</p>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#1A1A1A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Quase-Preto</div>
+          <div class="swatch-hex">#1A1A1A</div>
+          <div class="swatch-role">Títulos e texto de alta ênfase</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#3D3D3D;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Grafite</div>
+          <div class="swatch-hex">#3D3D3D</div>
+          <div class="swatch-role">Corpo de texto padrão</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#7A7A7A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cinza Muted</div>
+          <div class="swatch-hex">#7A7A7A</div>
+          <div class="swatch-role">Legendas, metadados, datas</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#D0D0D0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cinza Borda</div>
+          <div class="swatch-hex">#D0D0D0</div>
+          <div class="swatch-role">Divisores, bordas de card</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#EBEBEB; border-bottom: 1px solid #D0D0D0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cinza Fundo</div>
+          <div class="swatch-hex">#EBEBEB</div>
+          <div class="swatch-role">Background geral da aplicação</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#FFFFFF; border-bottom: 1px solid #D0D0D0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Branco</div>
+          <div class="swatch-hex">#FFFFFF</div>
+          <div class="swatch-role">Surface — cards, painéis, modais</div>
+        </div>
+      </div>
+
+      <p class="group-label">Feedback (acento complementar + avisos)</p>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#C62828;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Vermelho Alerta</div>
+          <div class="swatch-hex">#C62828</div>
+          <div class="swatch-role">Dívida vencida, inadimplência</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#FFEBEE;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Rosa Badge</div>
+          <div class="swatch-hex">#FFEBEE</div>
+          <div class="swatch-role">Fundo de badge "Atrasado"</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-block" style="background-color:#F9A825;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Âmbar</div>
+          <div class="swatch-hex">#F9A825</div>
+          <div class="swatch-role">Atenção — ícone de vendas pendentes</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Tabela de Cores e Aplicação -->
+  <section class="section">
+    <p class="section-label">04 — Referência de Cores</p>
+    <h2 class="section-title">Uso das cores no projeto</h2>
+    <p class="section-desc">
+      Relação das cores do sistema definidas com seus respectivos códigos hexadecimais e onde aplicá-las nas folhas de estilo.
+    </p>
+
+    <table class="var-table">
+      <thead>
+        <tr>
+          <th>Papel / Nome</th>
+          <th>Código Hexadecimal</th>
+          <th>Onde usar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Verde Floresta (Principal)</td>
+          <td><span class="dot" style="background-color:#2E7D32;"></span><code>#2E7D32</code></td>
+          <td>Botões primários, navegação ativa, ações rápidas</td>
+        </tr>
+        <tr>
+          <td>Verde Médio</td>
+          <td><span class="dot" style="background-color:#4CAF50;"></span><code>#4CAF50</code></td>
+          <td>Badge "Em dia", ícones secundários e confirmação</td>
+        </tr>
+        <tr>
+          <td>Verde Profundo</td>
+          <td><span class="dot" style="background-color:#1B5E20;"></span><code>#1B5E20</code></td>
+          <td>Hover e estado pressionado do botão primário</td>
+        </tr>
+        <tr>
+          <td>Cinza Fundo</td>
+          <td><span class="dot" style="background-color:#EBEBEB; border:1px solid #cccccc;"></span><code>#EBEBEB</code></td>
+          <td>Background do <code>&lt;body&gt;</code> e de páginas</td>
+        </tr>
+        <tr>
+          <td>Branco (Superfície)</td>
+          <td><span class="dot" style="background-color:#FFFFFF; border:1px solid #cccccc;"></span><code>#FFFFFF</code></td>
+          <td>Cards, modais, painéis flutuantes</td>
+        </tr>
+        <tr>
+          <td>Cinza Borda</td>
+          <td><span class="dot" style="background-color:#D0D0D0;"></span><code>#D0D0D0</code></td>
+          <td>Bordas de cards, linhas divisoras de tabela</td>
+        </tr>
+        <tr>
+          <td>Quase-Preto</td>
+          <td><span class="dot" style="background-color:#1A1A1A;"></span><code>#1A1A1A</code></td>
+          <td>Títulos e nomes de clientes</td>
+        </tr>
+        <tr>
+          <td>Grafite</td>
+          <td><span class="dot" style="background-color:#3D3D3D;"></span><code>#3D3D3D</code></td>
+          <td>Texto corrido, células de tabela</td>
+        </tr>
+        <tr>
+          <td>Cinza Muted</td>
+          <td><span class="dot" style="background-color:#7A7A7A;"></span><code>#7A7A7A</code></td>
+          <td>Datas, legendas, metadados</td>
+        </tr>
+        <tr>
+          <td>Vermelho Alerta</td>
+          <td><span class="dot" style="background-color:#C62828;"></span><code>#C62828</code></td>
+          <td>Valor de dívidas atrasadas, badge "Atrasado"</td>
+        </tr>
+        <tr>
+          <td>Rosa Badge</td>
+          <td><span class="dot" style="background-color:#FFEBEE;"></span><code>#FFEBEE</code></td>
+          <td>Fundo do badge de atraso</td>
+        </tr>
+        <tr>
+          <td>Âmbar</td>
+          <td><span class="dot" style="background-color:#F9A825;"></span><code>#F9A825</code></td>
+          <td>Ícone de vendas pendentes no dashboard</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+</body>
+</html>
