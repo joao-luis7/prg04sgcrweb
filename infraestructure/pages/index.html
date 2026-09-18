@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGCR</title>
+    <title>SGCR - Sistema de Gestão</title>
     <link rel="icon" type="image/x-icon" href="../assets/midia/icon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
-    <header>
-        <h1> Bem vindo ao Gerenciamento de Vendas</h1>
+<body class="layout-pagina">
+    <!-- Controle de alternância do menu mobile sem JavaScript -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Alternar menu lateral">
+    <label for="menu-toggle" class="menu-toggle-btn">
+        <span class="txt-menu">Menu</span>
+        <span class="txt-fechar">Fechar</span>
+    </label>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+    <header class="layout-lateral">
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" class="ativo">Página Inicial</a></li>
+                <li><a href="atividade-3.html">Atividade 3</a></li>
+                <li><a href="sandbox.html">Sandbox</a></li>
+                <li><a href="paleta.html">Paleta de Cores</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <p><a href="atividade-3.html">Acessar Atividade 3</a></p>
-        <p><a href="sandbox.html">Acessar Sandbox</a></p>
-        <p><a href="paleta.html">Acessar Paleta de Cores</a></p>
-    </nav>
-    <footer>
-        <p>Criado por João Luis</p>
-    </footer>
+
+    <main class="conteudo-principal">
+        <section>
+            <h1>Bem vindo ao Gerenciamento de Vendas</h1>
+        </section>
+        <footer>
+            <p>Criado por João Luis</p>
+        </footer>
+    </main>
 </body>
 </html>

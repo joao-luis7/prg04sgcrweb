@@ -1,7 +1,12 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #f5f7fa;
+    background-color: #D6D6D6;
     font-family: Arial, Helvetica, sans-serif;
     color: #2d3748;
     margin: 20px;
@@ -9,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #1a365d;
+    color: #2E2E2E;
     text-align: center;
 }
 
@@ -29,4 +34,186 @@ h2 {
 .secao-midia {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+ 
+/* Layout Principal e Menu Lateral de Navegação */
+
+body.layout-pagina {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.layout-lateral {
+    width: 392px;
+    min-height: 100vh;
+    background-color: #D0D0D0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+#menu {
+    font-family: 'Content', sans-serif;
+    width: 100%;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+#menu li {
+    margin: 0;
+    padding: 0;
+}
+
+#menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 318px;
+    height: 40px;
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-family: 'Content', sans-serif;
+    border-radius: 4px;
+}
+
+#menu a:hover {
+    background-color: rgba(246, 246, 246, 0.6);
+}
+
+#menu a.ativo,
+#menu a:focus,
+#menu a:active {
+    background-color: #F6F6F6;
+    font-weight: bold;
+    color: #1A1A1A;
+    outline: none;
+    border-radius: 16px;
+
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*   Responsividade Global para Mídias */
+
+   img, picture, iframe, video {
+    max-width: 100%;
+}
+
+.secao-midia audio {
+    width: 100%;
+    max-width: 500px;
+}
+   
+/* Controles do Menu Retrátil Mobile (Ocultos no Desktop) */
+.menu-toggle-checkbox,
+.menu-toggle-btn,
+.menu-overlay {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body.layout-pagina {
+        flex-direction: column;
+    }
+
+    /* Botão simples de texto fixado no topo */
+    .menu-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 1001;
+        padding: 8px 18px;
+        background-color: #1A1A1A;
+        color: #FFFFFF;
+        font-family: 'Content', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid #D0D0D0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        user-select: none;
+    }
+
+    /* Alternância de texto: Menu quando fechado, Fechar quando aberto */
+    .menu-toggle-btn .txt-fechar {
+        display: none;
+    }
+
+    .menu-toggle-btn .txt-menu {
+        display: inline;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-toggle-btn .txt-menu {
+        display: none;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-toggle-btn .txt-fechar {
+        display: inline;
+    }
+
+    /* Fundo escurecido (overlay) para fechar ao tocar fora */
+    .menu-toggle-checkbox:checked ~ .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.45);
+        z-index: 999;
+    }
+
+    /* Menu em formato de gaveta lateral no celular (contraído/fechado por padrão) */
+    .layout-lateral {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 320px;
+        max-width: 85vw;
+        min-height: 100vh;
+        padding-top: 70px;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Quando o botão é acionado, o menu estende (abre) */
+    .menu-toggle-checkbox:checked ~ .layout-lateral {
+        display: flex;
+    }
+
+    /* Adaptação dos links para caber confortavelmente em telas estreitas */
+    #menu a {
+        width: calc(100% - 32px);
+        max-width: 318px;
+    }
+
+    /* Espaçamento superior no conteúdo para não colidir com o botão fixo */
+    .conteudo-principal {
+        padding: 70px 20px 20px 20px;
+    }
 }
