@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap');
+
+body{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: #D6D6D6;
+    }
+
+#form-login{
+    font-family: 'Content', sans-serif;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+    padding: 30px;
+    background-color: #E6E6E6;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+form h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+input{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #1C7B07;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
