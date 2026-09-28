@@ -14,22 +14,29 @@ body {
   padding: 0;
 }
 
+/* ==========================================================================
+   Layout Base (Mobile First — Smartphones / Telas Pequenas)
+   ========================================================================== */
+
 .page-wrapper {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
+  padding: 24px 14px;
 }
 
 .page-header {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 h1 {
+  font-size: 22px;
   font-weight: 700;
   color: #1A1A1A;
   margin: 0 0 8px 0;
 }
 
 .subtitle {
+  font-size: 14px;
   color: #7A7A7A;
   margin: 0;
 }
@@ -78,11 +85,14 @@ h1 {
 /* ─── Botões de Ação ─── */
 .actions {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .btn {
-  padding: 8px 16px;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: center;
   border: none;
   border-radius: 6px;
   font-size: 14px;
@@ -109,42 +119,11 @@ h1 {
 }
 
 /* ==========================================================================
-   Breakpoints e Media Queries (Mobile First)
+   Estilos Incrementais (Mobile First com min-width)
    ========================================================================== */
 
-/* 1. Smartphones: Até 600px */
-@media (max-width: 600px) {
-  .page-wrapper {
-    width: 100%;
-    padding: 24px 14px;
-  }
-
-  .page-header {
-    margin-bottom: 24px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .actions {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 8px 12px;
-    text-align: center;
-  }
-}
-
-/* 2. Tablets: 601px a 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* ─── 1. Tablets (a partir de 601px) ─── */
+@media (min-width: 601px) {
   .page-wrapper {
     width: 95%;
     padding: 36px 20px;
@@ -166,9 +145,14 @@ h1 {
     flex-direction: row;
     gap: 8px;
   }
+
+  .btn {
+    width: auto;
+    padding: 8px 16px;
+  }
 }
 
-/* 3. Desktops: acima de 1025px */
+/* ─── 2. Desktops (a partir de 1025px) ─── */
 @media (min-width: 1025px) {
   .page-wrapper {
     max-width: 1000px;
@@ -182,10 +166,5 @@ h1 {
 
   .subtitle {
     font-size: 16px;
-  }
-
-  .actions {
-    flex-direction: row;
-    gap: 8px;
   }
 }

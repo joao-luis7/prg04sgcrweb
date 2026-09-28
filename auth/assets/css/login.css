@@ -16,27 +16,48 @@ body {
     font-family: 'Content', sans-serif;
 }
 
+/* ==========================================================================
+   Layout Base (Mobile First — Smartphones / Telas Pequenas)
+   ========================================================================== */
+
 #form-login {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    max-width: 100%;
+    padding: 24px 18px;
     background-color: #E6E6E6;
-    border-radius: 24px;
+    border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 form h1 {
     text-align: center;
     font-weight: bold;
+    margin: 0 0 12px 0;
+    color: #1A1A1A;
+    font-size: 1.5rem;
 }
 
+label {
+    font-weight: 500;
+    color: #333333;
+}
 
 input {
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+    width: 100%;
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1C7B07;
+    box-shadow: 0 0 0 2px rgba(28, 123, 7, 0.2);
 }
 
 .btn-submit {
@@ -58,30 +79,15 @@ input {
 }
 
 /* ==========================================================================
-   Breakpoints e Media Queries 
+   Estilos Incrementais (Mobile First com min-width)
    ========================================================================== */
 
-@media (max-width: 600px) {
-    body {
-        padding: 16px;
-    }
-
-    #form-login {
-        max-width: 100%;
-        padding: 24px 18px;
-        border-radius: 16px;
-    }
-
-    form h1 {
-        font-size: 1.5rem;
-    }
-}
-
-/* 2. Tablets: 601px a 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* ─── 1. Tablets (a partir de 601px) ─── */
+@media (min-width: 601px) {
     #form-login {
         max-width: 360px;
         padding: 32px;
+        border-radius: 24px;
     }
 
     form h1 {
@@ -89,7 +95,7 @@ input {
     }
 }
 
-/* 3. Desktops: acima de 1025px */
+/* ─── 2. Desktops (a partir de 1025px) ─── */
 @media (min-width: 1025px) {
     #form-login {
         max-width: 380px;
