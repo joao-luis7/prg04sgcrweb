@@ -24,7 +24,9 @@ prg04sgcrweb/
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
-├── infraestructure/       # Módulo Global: Centraliza páginas e assets gerais e transversais do site
+├── admin/                 # Módulo de Administração: Dashboard e gerenciamento
+├── auth/                  # Módulo de Autenticação: Centraliza login e controle de acesso
+├── infrastructure/       # Módulo Global: Centraliza páginas e assets gerais e transversais do site
 │   ├── assets/
 │   │   ├── css/
 │   │   ├── images/
