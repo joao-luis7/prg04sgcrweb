@@ -13,6 +13,18 @@ body {
     line-height: 1.6;
 }
 
+/* O Bootstrap reseta as margens globais. Para manter compatibilidade com
+   as páginas legadas (como sandbox.html), garantimos que caso não usem o
+   layout da página inicial, preservem a aparência original. */
+body.layout-pagina {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
 h1 {
     color: #2E2E2E;
     text-align: center;
@@ -53,57 +65,7 @@ img, picture, iframe, video {
    Layout Base (Mobile First — Smartphones / Telas Pequenas)
    ========================================================================== */
 
-body.layout-pagina {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f7fa;
-}
-
-/* Controles do Menu Retrátil Mobile */
-.menu-toggle-checkbox {
-    display: none;
-}
-
-.menu-toggle-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 14px;
-    left: 14px;
-    z-index: 1001;
-    padding: 8px 18px;
-    background-color: #1A1A1A;
-    color: #FFFFFF;
-    font-family: 'Content', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid #D0D0D0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    user-select: none;
-}
-
-.menu-toggle-btn .txt-fechar {
-    display: none;
-}
-
-.menu-toggle-btn .txt-menu {
-    display: inline;
-}
-
-.menu-toggle-checkbox:checked ~ .menu-toggle-btn .txt-menu {
-    display: none;
-}
-
-.menu-toggle-checkbox:checked ~ .menu-toggle-btn .txt-fechar {
-    display: inline;
-}
-
+/* Menu overlay mobile */
 .menu-overlay {
     display: none;
 }
@@ -116,7 +78,7 @@ body.layout-pagina {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.45);
-    z-index: 999;
+    z-index: 1030; /* Abaixo da sidebar que é 1040 */
 }
 
 /* Menu Lateral em formato Gaveta Retrátil por padrão (Mobile) */
@@ -125,7 +87,7 @@ body.layout-pagina {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1040;
     width: 280px;
     max-width: 85vw;
     min-height: 100vh;
@@ -165,7 +127,7 @@ body.layout-pagina {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100% + 20px);
+    width: calc(100% + 30px);
     max-width: 250px;
     height: 40px;
     text-decoration: none;
@@ -195,7 +157,8 @@ body.layout-pagina {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 70px 16px 24px 16px;
+    /* Adiciona padding no topo para compensar a navbar fixed-top no mobile */
+    padding: 80px 16px 24px 16px;
 }
 
 /* ==========================================================================
@@ -204,25 +167,30 @@ body.layout-pagina {
 
 /* ─── 1. Tablets (a partir de 601px) ─── */
 @media (min-width: 601px) {
+    /* No tablet ajustamos apenas proporções gerais */
+}
+
+/* ─── 2. Desktops (a partir de 992px - breakpoint 'lg' do Bootstrap) ─── */
+@media (min-width: 992px) {
     body.layout-pagina {
         flex-direction: row;
     }
 
-    /* Oculta controles de gaveta mobile */
-    .menu-toggle-btn,
+    /* Oculta overlay de mobile */
     .menu-overlay {
-        display: none;
+        display: none !important;
     }
 
-    /* Sidebar fixa lateral compacta */
+    /* Sidebar fixa lateral */
     .layout-lateral {
-        display: flex;
+        display: flex !important;
         position: static;
-        width: 240px;
-        min-width: 240px;
+        width: 260px;
+        min-width: 260px;
         min-height: 100vh;
         padding-top: 32px;
         box-shadow: none;
+        border-right: 1px solid #c0c0c0;
     }
 
     #menu a {
@@ -234,39 +202,22 @@ body.layout-pagina {
     .conteudo-principal {
         padding: 32px 24px;
     }
-
-    h1 {
-        font-size: 1.85rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
 }
 
-/* ─── 2. Desktops (a partir de 1025px) ─── */
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
     .layout-lateral {
-        width: 360px;
-        min-width: 360px;
+        width: 320px;
+        min-width: 320px;
         padding-top: 40px;
     }
 
     #menu a {
-        width: 300px;
+        width: 260px;
         height: 42px;
         font-size: 16px;
     }
 
     .conteudo-principal {
         padding: 48px 40px;
-    }
-
-    h1 {
-        font-size: 2.25rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
     }
 }

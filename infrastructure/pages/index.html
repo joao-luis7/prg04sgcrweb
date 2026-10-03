@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGCR - Sistema de Gestão</title>
     <link rel="icon" type="image/x-icon" href="../assets/midia/icon/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="layout-pagina">
-    <!-- Controle de alternância do menu mobile -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Alternar menu lateral">
-    <label for="menu-toggle" class="menu-toggle-btn">
-        <span class="txt-menu">Menu</span>
-        <span class="txt-fechar">Fechar</span>
-    </label>
-    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+<body class="layout-pagina bg-light">
+    <!-- Controle de alternância do menu mobile (sem JS) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox d-none" aria-label="Alternar menu lateral">
+    
+    <!-- Navbar Mobile (Visível apenas em telas pequenas) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none shadow-sm fixed-top">
+        <div class="container-fluid">
+            <label for="menu-toggle" class="navbar-toggler m-0" style="cursor: pointer;">
+                <span class="navbar-toggler-icon"></span>
+            </label>
+        </div>
+    </nav>
+    
+    <label for="menu-toggle" class="menu-overlay"></label>
 
+    <!-- Menu Lateral -->
     <header class="layout-lateral">
         <nav id="menu">
             <ul>
@@ -24,17 +32,48 @@
                 <li><a href="atividade-3.html">Atividade 3</a></li>
                 <li><a href="sandbox.html">Sandbox</a></li>
                 <li><a href="paleta.html">Paleta de Cores</a></li>
-                <li><a href="../../auth/pages/login.html" class="btn-login">Login</a></li>
+                <li><a href="../../auth/pages/login.html" class="btn-login " style="background-color: #1C7B07; color: white;">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="conteudo-principal">
-        <section>
-            <h1>Bem vindo ao Gerenciamento de Vendas</h1>
-        </section>
-        <footer>
-            <p>Criado por João Luis</p>
+        <div class="container-fluid">
+            <section class="mb-4">
+                <h1 class="display-6 fw-bold text-dark mb-2 text-start">Bem vindo ao Gerenciamento de Vendas</h1>
+                <p class="lead text-secondary text-start mb-4">Sistema de Gestão e Controle de Recursos.</p>
+            </section>
+            
+            <!-- Grid e Cards -->
+            <section class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card shadow-sm border-0.5 rounded-4" style="background-color: #E6E6E6;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h5 fw-bold text-dark">Autenticação</h2>
+                            <p class="card-text flex-grow-1">Acesso com formulário Bootstrap e validações HTML5.</p>
+                            <a href="../../auth/pages/login.html" class="btn mt-3 text-white fw-bold" style="background-color: #1C7B07;">Ir para Login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-xl-4">
+                    <div class="card h-100 shadow-sm border-0 rounded-4" style="background-color: #E6E6E6;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h2 class="h5 fw-bold text-dark">Recursos</h2>
+                            <p class="card-text text-muted flex-grow-1">Teste de áudio/vídeo responsivo e documentação de paleta de cores.</p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a href="sandbox.html" class="btn btn-outline-secondary btn-sm flex-fill">Sandbox</a>
+                                <a href="paleta.html" class="btn btn-outline-secondary btn-sm flex-fill">Paleta</a>
+                                <a href="atividade-3.html" class="btn btn-outline-secondary btn-sm flex-fill">Ativ. 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer class="mt-auto border-top pt-3 text-center text-lg-start">
+            <p class="text-muted small mb-0">Criado por João Luis</p>
         </footer>
     </main>
 </body>

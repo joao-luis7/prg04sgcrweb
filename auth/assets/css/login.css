@@ -23,7 +23,6 @@ body {
 #form-login {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     width: 100%;
     max-width: 100%;
     padding: 24px 18px;
@@ -45,37 +44,33 @@ label {
     color: #333333;
 }
 
-input {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    width: 100%;
-    font-family: inherit;
-}
-
-input:focus {
-    outline: none;
-    border-color: #1C7B07;
-    box-shadow: 0 0 0 2px rgba(28, 123, 7, 0.2);
-}
-
 .btn-submit {
-    margin-top: 20px;
-    padding: 12px;
     background-color: #1C7B07;
     color: #FFFFFF;
     border: none;
     border-radius: 12px;
     font-size: 16px;
     font-weight: bold;
+    padding: 12px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.2s ease;
 }
 
-.btn-submit:hover {
+.btn-submit:hover, .btn-submit:focus {
     background-color: #155e05;
+    color: #FFFFFF;
+}
+
+.voltar-link {
+    text-decoration: none;
+    color: #555555;
+    font-size: 14px;
+}
+
+.voltar-link:hover {
+    text-decoration: underline;
+    color: #1A1A1A;
 }
 
 /* ==========================================================================

@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo - SGCR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 <body>
+    <div class="container mt-3 mb-4 d-flex justify-content-between align-items-center">
+        <a href="../../infrastructure/pages/index.html" class="nav-link text-primary">Voltar para a Página Inicial</a>
+    </div>
+
     <main class="page-wrapper">
         <header class="page-header">
             <h1>Painel Administrativo</h1>
@@ -14,13 +19,14 @@
         </header>
 
         <section class="section">
-            <div class="table-container">
-                <table class="user-table">
+            <div class="table-container table-responsive">
+                <table class="user-table table table-striped table-hover mb-0">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
+                            <th class="text-center">Status</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -29,45 +35,50 @@
                             <td>1</td>
                             <td>Ana Silva</td>
                             <td>ana.silva@exemplo.com</td>
+                            <td class="text-center"><span class="badge bg-success">Ativo</span></td>
                             <td class="actions">
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Excluir</button>
+                                <button class="btn btn-sm btn-edit">Editar</button>
+                                <button class="btn btn-sm btn-delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Carlos Oliveira</td>
                             <td>carlos.oliveira@exemplo.com</td>
+                            <td class="text-center"><span class="badge bg-success">Ativo</span></td>
                             <td class="actions">
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Excluir</button>
+                                <button class="btn btn-sm btn-edit">Editar</button>
+                                <button class="btn btn-sm btn-delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Mariana Costa</td>
                             <td>mariana.costa@exemplo.com</td>
+                            <td class="text-center"><span class="badge bg-warning text-dark">Pendente</span></td>
                             <td class="actions">
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Excluir</button>
+                                <button class="btn btn-sm btn-edit">Editar</button>
+                                <button class="btn btn-sm btn-delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>João Pereira</td>
                             <td>joao.pereira@exemplo.com</td>
+                            <td class="text-center"><span class="badge bg-danger">Inativo</span></td>
                             <td class="actions">
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Excluir</button>
+                                <button class="btn btn-sm btn-edit">Editar</button>
+                                <button class="btn btn-sm btn-delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>Beatriz Santos</td>
                             <td>beatriz.santos@exemplo.com</td>
+                            <td class="text-center"><span class="badge bg-success">Ativo</span></td>
                             <td class="actions">
-                                <button class="btn btn-edit">Editar</button>
-                                <button class="btn btn-delete">Excluir</button>
+                                <button class="btn btn-sm btn-edit">Editar</button>
+                                <button class="btn btn-sm btn-delete">Excluir</button>
                             </td>
                         </tr>
                     </tbody>

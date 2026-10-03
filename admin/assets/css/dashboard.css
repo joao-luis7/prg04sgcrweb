@@ -45,41 +45,29 @@ h1 {
 .table-container {
   background-color: #FFFFFF;
   border-radius: 12px;
-  overflow-x: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .user-table {
   width: 100%;
   min-width: 600px;
-  border-collapse: collapse;
   font-size: 14px;
 }
 
-.user-table thead tr {
-  background-color: #2E7D32;
-  color: #FFFFFF;
-}
-
-.user-table th {
+/* Força a cor do cabeçalho da tabela sobre o padrão do Bootstrap */
+.user-table thead tr th {
+  background-color: #2E7D32 !important;
+  color: #FFFFFF !important;
   text-align: left;
   padding: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  border-bottom: none;
 }
 
 .user-table td {
   padding: 16px;
-  border-bottom: 1px solid #D0D0D0;
   vertical-align: middle;
-}
-
-.user-table tr:last-child td {
-  border-bottom: none;
-}
-
-.user-table tr:nth-child(even) {
-  background-color: #F7F7F7;
 }
 
 /* ─── Botões de Ação ─── */
@@ -89,33 +77,28 @@ h1 {
   gap: 6px;
 }
 
-.btn {
-  width: 100%;
-  padding: 8px 12px;
-  text-align: center;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: #FFFFFF;
-}
-
 .btn-edit {
   background-color: #2E7D32;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 600;
 }
 
 .btn-edit:hover {
   background-color: #1B5E20;
+  color: #FFFFFF;
 }
 
 .btn-delete {
   background-color: #C62828;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 600;
 }
 
 .btn-delete:hover {
   background-color: #a02020;
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -144,11 +127,6 @@ h1 {
   .actions {
     flex-direction: row;
     gap: 8px;
-  }
-
-  .btn {
-    width: auto;
-    padding: 8px 16px;
   }
 }
 
